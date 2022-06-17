@@ -65,7 +65,9 @@
           <h1 class="decision-title">
             Эффективные решения<br />для вашего бизнеса
           </h1>
-          <button type="button" class="decision-btn">Заказать услугу</button>
+          <button type="button" class="decision-btn" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section class="benefits section">
@@ -137,11 +139,16 @@
           <h2 class="works-title">Чем мы занимаемся</h2>
           <ul class="works-list link">
             <li class="works-item">
-              <img
-                src="./images/img_1.jpg"
-                alt="Работа за компьютером"
-                width="370"
-              />
+              <a href="" class="works-picture">
+                <div class="works-apps">
+                  <img
+                    src="./images/img_1.jpg"
+                    alt="Работа за компьютером"
+                    width="370"
+                  />
+                  <p class="works-describe">Десктопные приложения</p>
+                </div>
+              </a>
             </li>
             <li class="works-item">
               <img
@@ -444,6 +451,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden data-modal">
+      <div class="modal">
+        <button type="button" class="modal-open-btn" data-modal-close>
+          <svg class="join-svg" width="11" height="11">
+            <use href="./images/icons.svg#icon-Vector-11"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
