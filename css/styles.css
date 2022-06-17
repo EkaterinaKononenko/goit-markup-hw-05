@@ -70,7 +70,7 @@ body {
   display: flex;
   align-items: center;
 }
-.link-nav{
+.link-nav {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -319,29 +319,6 @@ body {
 .works-list {
   display: flex;
   margin-top: 50px;
-}
-.works-apps {
-  position: relative;
-}
-
-.works-describe::after {
-  display: block;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  height: 70px;
-  padding: 27px 82px;
-  margin: 0;
-  background: rgba(47, 48, 58, 0.8);
-  transform: translateY(100%)
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 img {
   display: block;
@@ -801,7 +778,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(0, 0, 0, 0.2);
 }
 .modal {
   width: 528px;
@@ -816,23 +795,25 @@ img {
   position: absolute;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-open-btn {
+.modal-close-btn {
   width: 30px;
   height: 30px;
-  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
   right: 8px;
   top: 8px;
+  background-color: transparent;
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-.backdrop.is-hidden.modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(-360deg);
 }
+
