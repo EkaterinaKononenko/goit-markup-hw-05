@@ -816,4 +816,6 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(-360deg);
 }
-
+.join-svg-cross {
+  color: rgba(0, 0, 0, 1);
+}
